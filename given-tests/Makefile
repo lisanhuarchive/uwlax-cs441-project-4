@@ -5,7 +5,7 @@
 
 check: pagefault banner_help \
 	check-level-1 check-level-2 check-level-3 \
-	check-level-4 check-level-5 check-level-6
+	check-level-4 check-level-5 check-level-6 check-level-7
 
 banner_help:
 	@echo "By default check will run all levels."
@@ -16,6 +16,7 @@ banner_help:
 	@echo "   check-level-4"
 	@echo "   check-level-5"
 	@echo "   check-level-6"
+	@echo "   check-level-7"
 	@echo ""
 	@sleep 1
 
@@ -297,4 +298,51 @@ check-level-6-f-6: pagefault
 LEVEL_6_EXP_F_7=given-tests/level6-exp-f-7.txt
 check-level-6-f-7: pagefault
 	@given-tests/check.pl 7 $(LEVEL_6_INPUT) $(LEVEL_6_EXP_F_7)
+
+
+###############################################
+# Tests - Level 7
+###############################################
+LEVEL_7_INPUT=given-tests/level7.txt
+check-level-7: pagefault banner_7 \
+	check-level-7-f-0 check-level-7-f-1 check-level-7-f-2 check-level-7-f-3 \
+	check-level-7-f-4 check-level-7-f-5 check-level-7-f-6 check-level-7-f-7
+
+banner_7:
+	@echo ""
+	@echo "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+	@echo "mmmmmmmmm Level 7 Tests mmmmmmmmmmm"
+	@echo "mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+
+LEVEL_7_EXP_F_0=given-tests/level7-exp-f-0.txt
+check-level-7-f-0: pagefault
+	@given-tests/check.pl 0 $(LEVEL_7_INPUT) $(LEVEL_7_EXP_F_0)
+
+LEVEL_7_EXP_F_1=given-tests/level7-exp-f-1.txt
+check-level-7-f-1: pagefault
+	@given-tests/check.pl 1 $(LEVEL_7_INPUT) $(LEVEL_7_EXP_F_1)
+
+LEVEL_7_EXP_F_2=given-tests/level7-exp-f-2.txt
+check-level-7-f-2: pagefault
+	@given-tests/check.pl 2 $(LEVEL_7_INPUT) $(LEVEL_7_EXP_F_2)
+
+LEVEL_7_EXP_F_3=given-tests/level7-exp-f-3.txt
+check-level-7-f-3: pagefault
+	@given-tests/check.pl 3 $(LEVEL_7_INPUT) $(LEVEL_7_EXP_F_3)
+
+LEVEL_7_EXP_F_4=given-tests/level7-exp-f-4.txt
+check-level-7-f-4: pagefault
+	@given-tests/check.pl 4 $(LEVEL_7_INPUT) $(LEVEL_7_EXP_F_4)
+
+LEVEL_7_EXP_F_5=given-tests/level7-exp-f-5.txt
+check-level-7-f-5: pagefault
+	@given-tests/check.pl 5 $(LEVEL_7_INPUT) $(LEVEL_7_EXP_F_5)
+
+LEVEL_7_EXP_F_6=given-tests/level7-exp-f-6.txt
+check-level-7-f-6: pagefault
+	@given-tests/check.pl 6 $(LEVEL_7_INPUT) $(LEVEL_7_EXP_F_6)
+
+LEVEL_7_EXP_F_7=given-tests/level7-exp-f-7.txt
+check-level-7-f-7: pagefault
+	@given-tests/check.pl 7 $(LEVEL_7_INPUT) $(LEVEL_7_EXP_F_7)
 
