@@ -63,10 +63,9 @@ Reference String:
 ---
 You can enter `make check` to enable the default test scripts.
 
-You can enter `make my-check` to enable the customed test scripts.
-
 ##About each test
 ---
+If there's any problem with some algorithm, you will see the error about the column and then you will know the wrong algorithm.
 
 ##Know bugs and Problem areas
 ---
